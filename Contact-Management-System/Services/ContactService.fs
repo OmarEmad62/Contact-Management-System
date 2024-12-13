@@ -22,3 +22,10 @@ let searchContactByPhoneNumber (contacts: Map<string, Contact>) (phoneNumber: st
     contacts
     |> Map.filter (fun _ (c: Contact) -> c.PhoneNumber.Contains(phoneNumber, StringComparison.OrdinalIgnoreCase))
     |> Map.toList
+    
+let editContact (contacts: Map<string, Contact>) id updatedContact =
+     if Map.containsKey id contacts then
+         Map.add id updatedContact contacts
+     else
+         printfn "Contact not found."
+         contacts
