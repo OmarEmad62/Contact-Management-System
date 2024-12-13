@@ -12,3 +12,13 @@ module ContactService =
         else
             let id = Guid.NewGuid().ToString()
             Map.add id contact contacts
+            
+    let searchContactByName (contacts: Map<string, Contact>) (name: string) =
+    contacts
+    |> Map.filter (fun _ (c: Contact) -> c.Name.Contains(name, StringComparison.OrdinalIgnoreCase))
+    |> Map.toList
+
+let searchContactByPhoneNumber (contacts: Map<string, Contact>) (phoneNumber: string) =
+    contacts
+    |> Map.filter (fun _ (c: Contact) -> c.PhoneNumber.Contains(phoneNumber, StringComparison.OrdinalIgnoreCase))
+    |> Map.toList
