@@ -29,3 +29,9 @@ let editContact (contacts: Map<string, Contact>) id updatedContact =
      else
          printfn "Contact not found."
          contacts
+let deleteContact (contacts: Map<string, Contact>) id =
+     if Map.containsKey id contacts then
+         Map.remove id contacts
+     else
+         printfn "Contact not found."
+         contacts         
