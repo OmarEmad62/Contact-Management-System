@@ -1,7 +1,7 @@
-namespace Contact-Management-System.Services
+﻿namespace ContactManagementSystem.Services
 
 open System
-open Contact-Management-System.Models
+open ContactManagementSystem.Models
 
 module ContactService =
 
@@ -12,26 +12,27 @@ module ContactService =
         else
             let id = Guid.NewGuid().ToString()
             Map.add id contact contacts
-            
-    let searchContactByName (contacts: Map<string, Contact>) (name: string) =
-    contacts
-    |> Map.filter (fun _ (c: Contact) -> c.Name.Contains(name, StringComparison.OrdinalIgnoreCase))
-    |> Map.toList
 
-let searchContactByPhoneNumber (contacts: Map<string, Contact>) (phoneNumber: string) =
-    contacts
-    |> Map.filter (fun _ (c: Contact) -> c.PhoneNumber.Contains(phoneNumber, StringComparison.OrdinalIgnoreCase))
-    |> Map.toList
-    
-let editContact (contacts: Map<string, Contact>) id updatedContact =
-     if Map.containsKey id contacts then
-         Map.add id updatedContact contacts
-     else
-         printfn "Contact not found."
-         contacts
-let deleteContact (contacts: Map<string, Contact>) id =
-     if Map.containsKey id contacts then
-         Map.remove id contacts
-     else
-         printfn "Contact not found."
-         contacts         
+    let searchContactByName (contacts: Map<string, Contact>) (name: string) =
+        contacts
+        |> Map.filter (fun _ (c: Contact) -> c.Name.Contains(name, StringComparison.OrdinalIgnoreCase))
+        |> Map.toList
+
+    let searchContactByPhoneNumber (contacts: Map<string, Contact>) (phoneNumber: string) =
+        contacts
+        |> Map.filter (fun _ (c: Contact) -> c.PhoneNumber.Contains(phoneNumber, StringComparison.OrdinalIgnoreCase))
+        |> Map.toList
+
+    let editContact (contacts: Map<string, Contact>) id updatedContact =
+        if Map.containsKey id contacts then
+            Map.add id updatedContact contacts
+        else
+            printfn "Contact not found."
+            contacts
+
+    let deleteContact (contacts: Map<string, Contact>) id =
+        if Map.containsKey id contacts then
+            Map.remove id contacts
+        else
+            printfn "Contact not found."
+            contacts

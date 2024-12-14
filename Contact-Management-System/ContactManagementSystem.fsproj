@@ -13,8 +13,10 @@
 
 
 	<ItemGroup>
-    <Compile Include="Models\Contact.fs" />
-    <Compile Include="Program.fs" />
+		<Compile Include="Models\Contact.fs" />
+		<Compile Include="Services\ContactService.fs" />
+		<Compile Include="UI\MainForm.fs" />
+		<Compile Include="Program.fs" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-namespace Contact-Management-System.Models
+namespace ContactManagementSystem.Models
 
 type Contact = {
     Name: string

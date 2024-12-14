@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Contact-Management-System", "Contact-Management-System\Contact-Management-System.fsproj", "{B163EF6E-B689-4304-ABFA-AEC89D020A28}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ContactManagementSystem", "Contact-Management-System\ContactManagementSystem.fsproj", "{B163EF6E-B689-4304-ABFA-AEC89D020A28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
